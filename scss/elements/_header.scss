@@ -1,0 +1,301 @@
+#global_header {
+    background: #000;
+    padding-top: 20px;
+    z-index: 2;
+
+    h1 {
+        margin: 0;
+    }
+
+    .my_container {
+        padding: 0;
+    }
+
+    .header_left {
+        @include span-columns(3);
+
+        @include media($mobile) {
+            @include span-columns(4);
+            padding: 0 10px;
+            border-bottom: 1px solid;
+            border-color: rgba(102,143,159, .4);
+        }
+
+        .logo {
+            @include media($mobile) {
+                width: 150px;
+            }
+        }
+
+    }
+
+    .header_right {
+        @include span-columns(9);
+
+        @include media($mobile) {
+            @include span-columns(4);
+            padding: 20px 10px;
+        }
+
+        img {
+            width: auto;
+
+            @include media($smallMobile) {
+                width: 20px;
+            }
+        }
+
+        .button {
+            padding: 5px 20px;
+
+            @include media($tablet) {
+                padding: 4px 18px;
+            }
+
+            @include media($mobile) {
+                padding: 4px 14px;
+            }
+
+            @include media($smallMobile) {
+                padding: 4px 8px;
+            }
+        }
+
+        .hr_content {
+            @include media($mobile) {
+                width: 100%;
+            }
+        }
+    }
+
+    .text_wrap {
+        padding: 0 10px;
+        margin-right: 10px;
+
+        @include media($mobile) {
+            margin-right: 5px;
+        }
+
+        @include media($smallMobile) {
+            width: 58%;
+            text-align: left;
+            padding: 3px 5px 0;
+        }
+
+        .full_width {
+            @include media($smallMobile) {
+                line-height: 1.4;
+            }
+
+        }
+
+        a {
+            font-size: 13px;
+            color: $white;
+            margin: 0;
+            line-height: 1.4;
+
+            @include media($tablet) {
+                font-size: 12px;
+            }
+
+            @include media($smallMobile) {
+                font-size: 11px;
+                line-height: 1;
+            }
+
+            &:hover {
+                color: $grayHover;
+            }
+        }
+
+        span {
+            margin-top: -5px;
+
+            @include media($smallMobile) {
+                margin-top: -3px;
+                font-size: 11px;
+                margin-right: 5px;
+            }
+        }
+
+        h4 {
+            font-size: 13px;
+            margin: 0;
+
+            @include media($smallMobile) {
+                width: 100%;
+                float: left;
+            }
+
+            a {
+                color: $lightGreen;
+
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .menu {
+        padding-top: 25px;
+
+        @include media($tablet) {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        @include media($mobile){
+            position: absolute;
+            width: 100%;
+            height: 1000px;
+            float: left;
+            padding-top: 0;
+            padding-right: 0;
+            top: 75px;
+            left: -180%;
+            background: $black;
+            -webkit-transition: .25s ease-in-out;
+            -moz-transition: .25s ease-in-out;
+            -o-transition: .25s ease-in-out;
+            transition: .25s ease-in-out;
+            border-top: 1px solid #141414;
+            z-index: 999;
+
+        }
+
+        &.open {
+            left: 0;
+        }
+    }
+
+    nav {
+
+        @include media($mobile) {
+            @include span-columns(4);
+            border-top: 1px solid;
+            border-color: rgba(255,255,255,.2);
+        }
+
+        ul {
+            @include span-columns(12);
+            margin-bottom: 0;
+
+            li {
+                float: left;
+                padding: 0 15px;
+                line-height: 1;
+
+                &:last-child {
+                    padding-right: 0;
+                }
+
+                @include media($mobile) {
+                    @include span-columns(4);
+                    border-bottom: 1px solid;
+                    border-color: rgba(126,162,153, .7);
+                }
+
+                a {
+                    @include adelle;
+                    font-size: 16px;
+                    color: $white;
+
+                    @include media($tablet) {
+                        font-size: 14px;
+                    }
+
+                    @include media($mobile) {
+                        display: block;
+                        padding: 20px 0;
+                    }
+
+                    &:hover {
+                        color: $grayHover;
+                    }
+                }
+            }
+        }
+    }
+
+    .mobile_menu_icon {
+        display: none;
+        width: 35px;
+        height: 26px;
+        float: right;
+        margin-top: 12px;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+
+        span {
+            position: absolute;
+            height: 5px;
+            width: 100%;
+            background: $white;
+            border-radius: 9px;
+            opacity: 1;
+            left: 0;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: .25s ease-in-out;
+            -moz-transition: .25s ease-in-out;
+            -o-transition: .25s ease-in-out;
+            transition: .25s ease-in-out;
+
+            &:nth-child(1) {
+                top: 0px;
+            }
+
+            &:nth-child(2) {
+                top: 10px;
+            }
+
+            &:nth-child(3) {
+                top: 20px;
+            }
+        }
+
+        &.open span {
+
+            &:nth-child(1) {
+                top: 12px;
+                -webkit-transform: rotate(135deg);
+                -moz-transform: rotate(135deg);
+                -o-transform: rotate(135deg);
+                transform: rotate(135deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+                left: -60px;
+            }
+
+            &:nth-child(3) {
+                top: 12px;
+                -webkit-transform: rotate(-135deg);
+                -moz-transform: rotate(-135deg);
+                -o-transform: rotate(-135deg);
+                transform: rotate(-135deg);
+            }
+
+        }
+
+        @include media($mobile){
+            display: block;
+            //width: 40px;
+            //float: left;
+            //padding-top: 4px;
+        }
+
+    }
+}

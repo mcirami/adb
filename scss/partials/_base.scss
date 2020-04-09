@@ -1,0 +1,144 @@
+* {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	margin-bottom: 10px;
+}
+
+h2, h3, h4 {
+    margin: 0;
+}
+
+html, body {
+    min-height: 100%;
+    width: 100%;
+    //overflow-x: hidden;
+}
+
+html {
+    font-size: 62.5%;
+    background: none;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: $white;
+    height: 100%;
+}
+
+.full_width {
+	@include span-columns(12);
+}
+
+a {
+	text-decoration: none;
+	/*@include transition(color 1s ease-in);*/
+	cursor: pointer;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+::selection {
+	background: lighten($orange, 5%);
+	opacity: 0.8;
+	color: $white;
+	text-shadow: 0 0 1px $charcoal;
+}
+
+::moz-selection {
+	background: lighten($orange, 5%);
+	opacity: 0.8;
+	color: $white;
+	text-shadow: 0 0 1px $charcoal;
+}
+
+.oldies {
+	background: lighten($charcoal, 20%);
+	color: $white;
+	text-align: center;
+	padding: 1rem 0;
+}
+
+.wrapper.fixed {
+    position: fixed;
+    z-index: 0;
+}
+
+.button {
+    padding: 8px 20px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: $white;
+
+    @include media($tablet) {
+        font-size: 14px;
+    }
+
+    &.blue {
+        background: $darkBlue;
+        border-bottom: 3px solid $blueHover;
+
+        &:hover {
+            background: $blueHover;
+            color: $white;
+        }
+    }
+
+    &.green {
+        background: $green;
+        border-bottom: 3px solid $greenHover;
+
+        &:hover {
+            color: $white;
+            background: $greenHover;
+        }
+    }
+}
+
+.page_title {
+    margin-bottom: 5px;
+
+    h3 {
+        color: $black;
+        font-size: 40px;
+    }
+}
+
+.description {
+    margin-bottom: 15px;
+
+    p {
+        color: $gray;
+
+        @include media($mobile) {
+            font-size: 14px;
+        }
+    }
+}
+
+.animated {
+    -webkit-animation-duration: 5s;
+    -moz-animation-duration: 5s;
+    -o-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-delay: .2s;
+    -moz-animation-delay: .2s;
+    -o-animation-delay: .2s;
+    animation-delay: .2s;
+}

@@ -1,0 +1,61 @@
+// mixins
+
+@mixin clearRow($nth) {
+	&:nth-child(#{$nth}+1) {
+		clear: both;
+	}
+}
+
+// Omega Reset
+@mixin omega-reset($nth, $columns) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter($columns); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
+
+// Vertical Align
+@mixin vertical-align {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+@mixin horizontal-align {
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+@mixin bebas {
+	font-family: 'bebas-neue-reg', sans-serif;
+	font-weight: 300;
+}
+
+@mixin gothammed {
+    font-family: 'gotham-med', sans-serif;
+    font-weight: 600;
+}
+
+@mixin adelle {
+	font-family: 'adelle-reg', sans-serif;
+	font-weight: 300;
+}
+
+@mixin museo300 {
+	font-family: 'museo300', sans-serif;
+	font-weight: 300;
+}
+
+@mixin museo700 {
+	font-family: 'museo700', sans-serif;
+	font-weight: 700;
+}
+
+@mixin roboto {
+	font-family: 'roboto-reg', sans-serif;
+	font-weight: 300;
+}
+

@@ -1,0 +1,222 @@
+.gallery_template {
+    padding: 40px 0;
+    background: url('../images/forestry-bg.jpg') no-repeat;
+    background-size: cover;
+
+    @include media($mobile) {
+        padding: 20px 0;
+    }
+
+    .image_wrap {
+        width: 32%;
+        float: left;
+        margin-right: 2%;
+        margin-bottom: 2%;
+
+        @include media($mobile) {
+            width: 49%;
+        }
+
+        &:nth-child(3n) {
+            margin-right: 0;
+
+            @include media($mobile) {
+                margin-right: 2%;
+            }
+        }
+
+        &:nth-child(2n) {
+            @include media($mobile) {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.fancybox-caption-wrap {
+    text-align: center;
+}
+
+.fancybox-show-nav .fancybox-navigation {
+    top: 50%;
+    width: 100%;
+    display: inline-block;
+}
+
+.contact_page {
+    padding: 40px 0;
+
+    @include media($smallMobile) {
+        padding: 20px 0 0;
+    }
+
+    .three_column_section {
+        padding: 20px 0;
+        margin-top: 40px;
+
+        @include media($tablet) {
+            margin-top: 20px;
+        }
+
+        @include media($smallMobile) {
+            margin-top: 0;
+        }
+
+        .column {
+            display: inline-block;
+            margin: 0 auto;
+            vertical-align: top;
+
+            .image_wrap {
+                width: 22%;
+                display: inline-block;
+                margin: auto;
+                padding: 0 8px;
+                vertical-align: top;
+
+                @include media($mobile) {
+                    width: 100%;
+                }
+
+                @include media($smallMobile) {
+                    width: 22%;
+                    float: left;
+                    margin: auto;
+                    padding: 0 8px;
+                    max-width: 80px;
+                }
+            }
+
+            .text_wrap {
+                width: 75%;
+                display: inline-block;
+                margin: auto;
+
+                @include media($mobile) {
+                    width: 100%;
+                }
+
+                @include media($smallMobile) {
+                    width: 75%;
+                    float: left;
+                    margin: auto;
+                }
+
+                h4 {
+                    font-size: 15px;
+                    color: $grayHover;
+
+                    @include media($tablet) {
+                        font-size: 14px;
+                    }
+                }
+
+                p {
+                    color: $gray;
+                    font-size: 14px;
+                    margin: 0;
+                    line-height: 1.4;
+
+                    @include media($tablet) {
+                        font-size: 12px;
+                    }
+
+                    a {
+                        @include roboto;
+                        color: $gray;
+
+                        &:hover {
+                            color: $grayHover;
+                        }
+                    }
+                }
+            }
+
+            &.address {
+                width: 28%;
+
+                @include media($smallMobile) {
+                    @include span-columns(4);
+                }
+
+                .image_wrap {
+                    @include media($mobile) {
+                        padding: 0 36%;
+                        margin-bottom: 8px;
+                    }
+
+                    @include media($smallMobile) {
+                        padding: 0 20px;
+                    }
+                }
+            }
+
+            &.email {
+                width: 40%;
+                padding-top: 6px;
+
+                @include media($smallMobile) {
+                    @include span-columns(4);
+                }
+
+                .image_wrap {
+                    width: 18%;
+                    padding: 0 10px;
+
+                    @include media($mobile) {
+                        padding: 0 0 10px;
+                        width: 24%;
+                    }
+
+                    @include media($smallMobile) {
+                        padding: 0 20px;
+                    }
+                }
+            }
+
+            &.phone {
+                width: 20%;
+
+                @include media($mobile) {
+                    width: 25%;
+                }
+
+                @include media($smallMobile) {
+                    @include span-columns(4);
+                    margin-top: 20px;
+                }
+
+                .image_wrap {
+                    width: 42%;
+                    padding: 0 10px;
+
+                    @include media($mobile) {
+                        margin-bottom: 8px;
+                        padding: 0 2px;
+                    }
+
+                    @include media($smallMobile) {
+                        width: 20%;
+                        padding: 0 10px;
+                        margin-right: 5px;
+                        max-width: 73px;
+                    }
+                }
+
+                .text_wrap {
+                    width: 52%;
+
+                    @include media($mobile) {
+                        width: 100%;
+                    }
+
+                    @include media($smallMobile) {
+                        width: 75%;
+                    }
+                }
+            }
+
+
+        }
+    }
+}

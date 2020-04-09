@@ -1,0 +1,22 @@
+// general wrapper class
+.my_container {
+	@extend %post;
+	max-width: 65.25em;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 40px;
+	
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	
+	@include media($tablet) {
+		padding: 0 20px;
+	}
+
+	@include media($mobile) {
+		padding: 0 10px;
+	}
+}

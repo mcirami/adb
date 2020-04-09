@@ -1,0 +1,211 @@
+#global_footer {
+    padding: 40px 0;
+    background: $black;
+
+    @include media($mobile) {
+        padding: 20px 0;
+    }
+    h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+
+        @include media($tablet) {
+            font-size: 22px;
+        }
+
+        @include media($mobile) {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+    }
+
+    a, p, span {
+        color: $darkGray;
+        font-size: 14px;
+
+        @include media($tablet) {
+            font-size: 12px;
+        }
+    }
+
+    a:hover {
+        color: $white;
+    }
+
+    .left_column {
+        @include span-columns(7);
+
+        @include media($mobile) {
+            @include span-columns(4);
+            text-align: center;
+        }
+
+        .two_column_wrap {
+            padding-bottom: 25px;
+
+            @include media($mobile) {
+                padding-bottom: 0;
+            }
+        }
+
+        .column {
+            @include span-columns(6);
+
+            @include media($mobile) {
+                @include span-columns(4);
+            }
+
+        }
+
+        li {
+            @include media($mobile) {
+                display: inline-block;
+                vertical-align: top;
+
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 2px;
+                width: 16px;
+                height: 16px;
+            }
+
+
+            &.address {
+                display: inline-block;
+                padding-left: 28px;
+                margin: 0;
+
+                p {
+                    display: inline-block;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        left: -28px;
+                        top: 4px;
+                        width: 16px;
+                        height: 16px;
+                        background: url('../images/icon-house.png') no-repeat;
+                        background-size: 100%;
+
+                        @include media($mobile) {
+                            left:-20px;
+                        }
+                    }
+
+                }
+
+                @include media($mobile) {
+                    width: 100%;
+                    padding-left: 22px;
+                }
+            }
+
+            &.email {
+                margin-bottom: 10px;
+                padding-left: 28px;
+
+                @include media($mobile) {
+                    line-height: 1;
+                    padding-left: 22px;
+                }
+
+                &:before {
+                    background: url('../images/icon-envelope.png') no-repeat;
+                    background-size: 100%;
+                    top: 8px;
+
+                    @include media($mobile) {
+                        top: 5px;
+                    }
+                }
+            }
+
+            &.phone {
+                padding-left: 28px;
+
+                @include media($mobile) {
+                    padding-left: 22px;
+                }
+
+                &:before {
+                    background: url('../images/icon-phone2.png') no-repeat;
+                    background-size: 100%;
+                    top: 4px;
+
+                    @include media($mobile) {
+                        left: 6px;
+                    }
+                }
+            }
+        }
+
+        .footer_menu {
+
+            ul {
+                @include span-columns(12);
+            }
+
+            li {
+                padding-left: 20px;
+
+                @include media($mobile) {
+                    padding-left: 12px;
+                }
+
+                &:before {
+                    content: '';
+                    background: url('../images/right-triangle.png') no-repeat;
+                    background-size: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 9px;
+                    width: 5px;
+                    height: 7px;
+
+                    @include media($mobile) {
+                        left: 3px;
+                        top: 11px;
+                    }
+                }
+            }
+        }
+    }
+
+    .copy {
+        padding: 15px 0;
+        text-align: center;
+        border-top: 1px solid $darkerGray;
+
+        @include media($mobile) {
+            margin-top: 20px;
+            padding-bottom: 0;
+        }
+
+        p {
+            font-size: 14px;
+            color: $darkerGray;
+        }
+    }
+
+    .right_column {
+        @include span-columns(5);
+        padding-left: 20px;
+
+        @include media($mobile) {
+            @include span-columns(4);
+            padding-left: 0;
+            text-align: center;
+
+            img {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+}
